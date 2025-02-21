@@ -14,11 +14,17 @@ public class ExempleDBContext(DbContextOptions options) : DbContext(options)
         //     .WithOne()
 
 
+        // builder.Entity<EntityA>()
+        //     .HasMany( e => e.EntityBs)
+        //     .WithOne( e => e.EntityA)
+        //     .HasForeignKey( e => e.EntityAId)
+        //     .OnDelete(DeleteBehavior.Cascade);
+
+        // many-to-many
+
         builder.Entity<EntityA>()
             .HasMany( e => e.EntityBs)
-            .WithOne( e => e.EntityA)
-            .HasForeignKey( e => e.EntityAId)
-            .OnDelete(DeleteBehavior.Cascade);
-
+            .WithMany( e => e.EntityAs);
+            
     }
 }

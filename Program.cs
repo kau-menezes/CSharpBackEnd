@@ -29,10 +29,16 @@ var obj = new EntityA{
     Name = "jr"
 };
 
-var obj1 = new EntityA{
-    Name = "jr jr"
+var obj1 = new EntityB{
+    Name = "jr"
 };
+
 context.Add(obj);
+context.Add(obj1);
+
+obj.EntityBs.Add(obj1);
+obj1.EntityAs.Add(obj);
+
 context.SaveChanges();
 
 context.Remove(obj);
