@@ -9,10 +9,16 @@ public class ExempleDBContext(DbContextOptions options) : DbContext(options)
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        // builder.Entity<EntityA>()
+        //     .HasMany<EntityB>()
+        //     .WithOne()
+
+
         builder.Entity<EntityA>()
             .HasMany( e => e.EntityBs)
             .WithOne( e => e.EntityA)
             .HasForeignKey( e => e.EntityAId)
             .OnDelete(DeleteBehavior.Cascade);
+
     }
 }
