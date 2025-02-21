@@ -8,7 +8,7 @@ public class EntityA
 
     public int EntityBId { get; set; }
 
-    public ICollection<EntityB>? EntityBs { get; set; }
+    public ICollection<EntityB>? EntityBs { get; set; } = [];
 
 
 
