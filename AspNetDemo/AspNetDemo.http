@@ -1,0 +1,6 @@
+@Kauane_Menezes_HostAddress = http://localhost:5178
+
+GET {{Kauane_Menezes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
