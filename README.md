@@ -25,3 +25,9 @@ dotnet add package Swashbuckle.AspNetCore
 dotnet tools install dotnet-ef
 dotnet tools update dotnet-ef
 ```
+
+Working with Migrations:
+```
+dotnet ef migrations add (migration_name)
+dotnet ef update database
+```
