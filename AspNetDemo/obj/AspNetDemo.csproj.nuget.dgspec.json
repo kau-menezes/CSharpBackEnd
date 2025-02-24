@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\aspnet\\AspNetDemo.csproj": {}
+    "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\dotnet\\AspNetDemo\\AspNetDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\aspnet\\AspNetDemo.csproj": {
+    "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\dotnet\\AspNetDemo\\AspNetDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\aspnet\\AspNetDemo.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\dotnet\\AspNetDemo\\AspNetDemo.csproj",
         "projectName": "AspNetDemo",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\aspnet\\AspNetDemo.csproj",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\dotnet\\AspNetDemo\\AspNetDemo.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\aspnet\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\Kauane Menezes\\dotnet\\AspNetDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"

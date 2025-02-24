@@ -14,6 +14,11 @@ builder.Services.AddDbContext<ParaLanchesDBContext>(options => {
     );
 });
 
+builder.Services
+    .AddSingleton()
+    .AddTransient()
+    .AddScope()
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
