@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Server.Configuration;
 using Server.Entities;
 using Server.Services.Password;
 using Server.Services.User;
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services
+    .AddJWTAuthentication(builder.Configuration)
     .AddDbContext<ParaLanchesDBContext>(options => {
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("DefaultConnection")

@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Server.Configuration;
 
 namespace Server.Services.Token;
 
@@ -13,10 +14,6 @@ public class JWTService
 {
     public string Generate(Entities.User user)
     {
-        var secret = config["JWTSecret"];
-        var keyBytes = Encoding.UTF8.GetBytes(secret);
-        var key = new SymmetricSecurityKey(keyBytes);
-
         var jwt = new JwtSecurityToken(
           claims: [
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
@@ -24,7 +21,7 @@ public class JWTService
           ] ,
           expires: DateTime.UtcNow.AddHours(2),
           signingCredentials: new SigningCredentials(
-            null,
+            config.GetJWTSecurityKey(),
             SecurityAlgorithms.HmacSha256Signature
           )
         );
