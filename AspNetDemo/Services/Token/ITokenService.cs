@@ -4,5 +4,5 @@ using Entities;
 
 public interface ITokenService
 {
-    string Generate(User user);
+    string Generate(ApplicationUser user);
 }

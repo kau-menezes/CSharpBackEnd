@@ -12,7 +12,7 @@ public class JWTService
     IConfiguration config
 ) : ITokenService
 {
-    public string Generate(Entities.User user)
+    public string Generate(Entities.ApplicationUser user)
     {
         var jwt = new JwtSecurityToken(
           claims: [

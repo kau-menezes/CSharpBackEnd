@@ -5,8 +5,8 @@ using Models;
 
 public interface IUserService
 {
-    Task<User> CreateUser(AccountData data);
-    Task<User> CreateUser(AccountData data, Guid invitedByUserId);
+    Task<ApplicationUser> CreateUser(AccountData data);
+    Task<ApplicationUser> CreateUser(AccountData data, Guid invitedByUserId);
 
-    Task<User?> Authenticate(LoginData data);
+    Task<ApplicationUser?> Authenticate(LoginData data);
 }

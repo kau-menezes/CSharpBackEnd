@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Server.Configuration;
 using Server.Entities;
 using Server.Services.Password;
+using Server.Services.Token;
 using Server.Services.User;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,7 @@ builder.Services
 
 builder.Services
     .AddSingleton(builder.Configuration)
+    .AddSingleton<ITokenService, JWTService>()
     .AddSingleton<IPasswordService, PBKDF2PasswordService>()
     .AddScoped<IUserService, EFUserService>();
 

@@ -12,11 +12,12 @@ public class EFUserService(
     IPasswordService passService
     ) : IUserService
 {
-    public async Task<User?> Authenticate(LoginData data)
+    public async Task<ApplicationUser?> Authenticate(LoginData data)
     {
-        var users = from user in ctx.Users
-        where user.Name == data.Email || user.Email == data.Email
-        select user;
+        var users = 
+            from user in ctx.Users
+            where user.Name == data.Email || user.Email == data.Email
+            select user;
 
         var foundUser = await users.FirstOrDefaultAsync();
 
@@ -29,14 +30,23 @@ public class EFUserService(
         return foundUser;
     }
 
-    public Task<User> CreateUser(AccountData data)
+    public async Task<ApplicationUser> CreateUser(AccountData data)
     {
-        throw new NotImplementedException();
+        var user = new ApplicationUser{
+            Email = data.Email,
+            Name = data.Name,
+            Password = passService.Hash(data.Password)
+        };
+
+        ctx.Add(user);
+        await ctx.SaveChangesAsync();
+
+        return user;
     }
 
-    public async Task<User> CreateUser(AccountData data, Guid invitedByUserId)
+    public async Task<ApplicationUser> CreateUser(AccountData data, Guid invitedByUserId)
     {
-        var user = new User{
+        var user = new ApplicationUser{
             Email = data.Email,
             Name = data.Name,
             Password = passService.Hash(data.Password),

@@ -335,3 +335,4 @@ C:\Users\disrct\Desktop\Kauane Menezes\dotnet\AspNetDemo\obj\Debug\net9.0\static
 C:\Users\disrct\Desktop\Kauane Menezes\dotnet\AspNetDemo\obj\Debug\net9.0\AspNetDemo.csproj.Up2Date
 C:\Users\disrct\Desktop\Kauane Menezes\dotnet\AspNetDemo\obj\Debug\net9.0\AspNetDemo.genruntimeconfig.cache
 C:\Users\disrct\Desktop\Kauane Menezes\dotnet\AspNetDemo\obj\Debug\net9.0\ref\AspNetDemo.dll
+C:\Users\disrct\Desktop\Kauane Menezes\dotnet\AspNetDemo\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
