@@ -42,6 +42,7 @@ Like to have it here to i can look up easily where everything goes when studying
 ### CleanArchDemo
 
 My (first) attempt on Clean Architecture. Might be a little messy :p
+A To-Do-List as simple as can be so the ocmplex stays only in the arch and folders hihi
 
 #### Commands used (for future studies and recaps):
 

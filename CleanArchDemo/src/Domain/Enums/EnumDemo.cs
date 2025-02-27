@@ -1,9 +1,7 @@
 namespace Server.Domain.Enums;
 
-public enum EnumDemo
+public enum TaskStatus
 {
-    NONE = 0,
-    LOW = 1,
-    MEDIUM = 2,
-    HIGH = 3
+    INCOMPLETE = 0,
+    COMPLETE = 1
 }
