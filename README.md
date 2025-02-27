@@ -31,3 +31,14 @@ Working with Migrations:
 dotnet ef migrations add (migration_name)
 dotnet ef update database
 ```
+
+
+### TemplaerArchDemo
+
+Made using the [Clean.Architecture.Solution.Template](https://github.com/jasontaylordev/CleanArchitecture) version 9.0.8.
+
+Like to have it here to i can look up easily where everything goes when studying and developing a Clean Architecture on my own 
+
+### CleanArchDemo
+
+My (first) attempt on Clean Architecture. Might be a little messy :p
