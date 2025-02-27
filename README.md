@@ -42,3 +42,21 @@ Like to have it here to i can look up easily where everything goes when studying
 ### CleanArchDemo
 
 My (first) attempt on Clean Architecture. Might be a little messy :p
+
+#### Commands used (for future studies and recaps):
+
+
+Starting the application:
+
+```
+dotnet new webapi
+```
+
+Dependencies:
+```
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+dotnet add package Swashbuckle.AspNetCore
+```
