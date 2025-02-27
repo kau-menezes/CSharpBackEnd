@@ -53,6 +53,7 @@ dotnet new webapi
 ```
 
 Dependencies:
+
 ```
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Tools
@@ -60,3 +61,6 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package Swashbuckle.AspNetCore
 ```
+### Questions for later:
+
+- [ ] where should interfaces of repositories go? Application or Domain?
