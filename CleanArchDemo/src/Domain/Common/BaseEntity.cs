@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using TemplateArchDemo.Domain.Common;
 
 namespace Server.Domain.Common;
 
@@ -6,7 +7,7 @@ namespace Server.Domain.Common;
 
 public abstract class BaseEntity<T>
 {
-    public T Id { get; set; }
+    public required T Id { get; set; }
 
     private readonly List<BaseEvent> _domainEvents = new();
 

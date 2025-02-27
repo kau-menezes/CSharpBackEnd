@@ -69,6 +69,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[7.3.0, )"
+            },
+            "mediatr": {
+              "target": "Package",
+              "version": "[12.4.1, )"
             }
           },
           "imports": [
