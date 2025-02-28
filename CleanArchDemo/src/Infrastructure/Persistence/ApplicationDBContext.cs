@@ -6,6 +6,9 @@ namespace Server.Infrastructure.Data;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
+    public DbSet<AppUser> Users { get ; set ; }
+    public DbSet<ToDoList> ToDoLists { get ; set ; }
+    public DbSet<TaskItem> Tasks { get ; set ; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
