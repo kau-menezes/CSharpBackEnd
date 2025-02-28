@@ -6,7 +6,7 @@ namespace Server.Infrastructure.Data;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
-    public DbSet<AppUser> Users { get ; set ; }
+    public DbSet<ApplicationUser> Users { get ; set ; }
     public DbSet<ToDoList> ToDoLists { get ; set ; }
     public DbSet<TaskItem> Tasks { get ; set ; }
 
@@ -14,7 +14,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<AppUser>()
+        builder.Entity<ApplicationUser>()
             .HasMany( e => e.ToDoLists)
             .WithOne( e => e.Owner)
             .HasForeignKey( e => e.OwnerId);

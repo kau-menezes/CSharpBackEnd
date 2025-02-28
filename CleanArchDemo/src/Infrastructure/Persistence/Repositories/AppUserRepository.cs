@@ -15,31 +15,31 @@ namespace Server.Infrastructure.Data
             _context = context;
         }
 
-        public async Task<AppUser?> GetByIdAsync(Guid userId)
+        public async Task<ApplicationUser?> GetByIdAsync(Guid userId)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(user => user.Id == userId);
         }
 
-        public async Task<AppUser?> GetByNameAsync(string username)
+        public async Task<ApplicationUser?> GetByNameAsync(string username)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(user => user.Name == username);
         }
 
-        public async Task AddAsync(AppUser user)
+        public async Task AddAsync(ApplicationUser user)
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync(CancellationToken.None);
         }
 
-        public async Task UpdateAsync(AppUser user)
+        public async Task UpdateAsync(ApplicationUser user)
         {
             _context.Users.Update(user);
             await _context.SaveChangesAsync(CancellationToken.None);
         }
 
-        public async Task DeleteAsync(AppUser user)
+        public async Task DeleteAsync(ApplicationUser user)
         {
             _context.Users.Remove(user);
             await _context.SaveChangesAsync(CancellationToken.None);

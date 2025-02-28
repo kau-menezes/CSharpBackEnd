@@ -2,7 +2,7 @@ using Server.Domain.Common;
 
 namespace Server.Domain.Entities;
 
-public class AppUser : BaseAuditableEntity
+public class ApplicationUser : BaseAuditableEntity
 {
     public required string Name { get; set; }
     public required string Email { get; set; }

@@ -4,9 +4,9 @@ namespace Server.Application.Interfaces.Repositories;
 
 public interface IAppUserRepository
 {
-    Task<AppUser?> GetByIdAsync(Guid userId);
-    Task<AppUser?> GetByNameAsync(string name);
-    Task AddAsync(AppUser user);
-    Task UpdateAsync(AppUser user);
-    Task DeleteAsync(AppUser user);
+    Task<ApplicationUser?> GetByIdAsync(Guid userId);
+    Task<ApplicationUser?> GetByNameAsync(string name);
+    Task AddAsync(ApplicationUser user);
+    Task UpdateAsync(ApplicationUser user);
+    Task DeleteAsync(ApplicationUser user);
 }
