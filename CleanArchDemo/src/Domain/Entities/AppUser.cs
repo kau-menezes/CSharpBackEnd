@@ -8,4 +8,6 @@ public class AppUser : BaseAuditableEntity
     public required string Email { get; set; }
     public required string Password { get; set; }
 
+    public ICollection<ToDoList>? ToDoLists { get; set; }
+
 }
