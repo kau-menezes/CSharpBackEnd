@@ -1,6 +1,6 @@
 namespace Server.Domain.Enums;
 
-public enum TaskStatus
+public enum TaskStatusEnum
 {
     INCOMPLETE = 0,
     COMPLETE = 1
