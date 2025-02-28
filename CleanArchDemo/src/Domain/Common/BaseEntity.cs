@@ -7,7 +7,7 @@ namespace Server.Domain.Common;
 
 public abstract class BaseEntity<T>
 {
-    public required T Id { get; set; }
+    public required T Id { get; set; } = default!;
 
     private readonly List<BaseEvent> _domainEvents = new();
 
